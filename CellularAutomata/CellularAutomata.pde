@@ -1,15 +1,14 @@
 boolean[] rule = {false,true,false,true,true,false,true,false};
 boolean[] cells;
-int len = 10000;
-int gens = 1000, gen = 0;
+int len = 1000;
+int gens = 500, gen = 0;
 void setup() {
-  size(600,600);
+  size(2000,1000);
   cells = new boolean[len];
   for ( boolean cell : cells) {
     cell = false;
   }
   cells[len/2] = true;
-  cells[len/2 - 2] = true;
 }
 
 void draw() {
@@ -17,7 +16,7 @@ void draw() {
   boolean[] newCells = new boolean[cells.length];
   for (int i = 0; i < cells.length; i++) {
     fill(cells[i] ? color(0) : color(255));
-    rect(i*((float)width/len),gen*((float)height/gens),10,10);
+    rect(i*((float)width/len),gen*((float)height/gens),width/len,height/gens);
     
     int neighborhood = 0;
     
