@@ -1,8 +1,8 @@
-boolean[] rule = {false,false,true,true,true,false,false,true};
+boolean[] rule = {true,true,true,false,false,false,false,true};
 boolean[] cells;
-int len = 1000;
+int len = 100;
 int gens = 50, gen = 0;
-int cellLength = 2;
+int cellLength = 7;
 void setup() {
   size(1000,1000);
   background(255);
@@ -14,8 +14,8 @@ void setup() {
 }
 
 void draw() {
-  noStroke();
-  //stroke(255);
+  //noStroke();
+  stroke(0);
   boolean[] newCells = new boolean[cells.length];
   for (int i = 0; i < cells.length; i++) {
     PVector c = new PVector(width/2,height/2);
