@@ -1,4 +1,4 @@
-boolean[] rule = {false,true,false,true,true,false,true,false};
+boolean[] rule = {true,false,true,true,true,true,false,false};
 boolean[] cells;
 int len = 1000;
 int gens = 500, gen = 0;
